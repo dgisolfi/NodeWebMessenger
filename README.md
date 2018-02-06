@@ -1,12 +1,12 @@
-#NodeWebMessenger
+# NodeWebMessenger
 
 A messenger client to communicate with all other instances of the client connected by sockets.
 
-###Author
+### Author
 
 Daniel Gisolfi - All current work - dgisolfi
 
-##Prerequisites
+## Prerequisites
 
 All requirements to run an instance of this project
 
@@ -15,11 +15,11 @@ All requirements to run an instance of this project
 - express
 - Heroku or an equivalent service
 
-##Deployment
+## Deployment
 
 Currently this project is being tested and developed within localhost but eventually, I would like to have this web app exist on Heroku or another equivalent service.
 
-##Goals
+## Goals
 
 The following are possible additions and goals I would like to meet with this project
 
