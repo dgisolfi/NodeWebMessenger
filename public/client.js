@@ -12,7 +12,7 @@ function setup() {
 	socket.on('message', newMessage);
 
 	function newMessage(data){
-		document.getElementById("messageBoard").innerHTML = data[msg];
+		printMessage(data[msg], data[name])
 
 		socket.on('disconnect', function() {
 	      console.log("Client has disconnected");
@@ -20,19 +20,26 @@ function setup() {
 	}
 }
 
-function sendButtonClick(message, bannerTxt ){
+function sendButtonClick(message, bannerTxt){
 	console.log('Sending: ' + message);
 	
-	var bannertxtList  = bannerTxt.split(" ");
-	console.log(bannertxtList);
-
+	function getUsername(bannerTxt){
+		bannerTxt = bannerTxt.toString();
+		var userName  = bannerTxt.split(" ");
+	}
+	
 	var data = {
 		msg: message, 
-		userName: userName
+		name: userName
 	}
-
+	//Emit message to all other sockets
 	socket.emit("message" , data);
+	printMessage(message, userName);
 }
 
+function printMessage(message, userName){
+	document.getElementById("nameFeild").innerHTML = userName;
+	document.getElementById("messageFeild").innerHTML = message;
+}
 
 

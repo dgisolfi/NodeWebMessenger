@@ -14,11 +14,11 @@
       }
     </style>
   </head>
-
-
   <h1 id="banner">Message Board</h1>
-  
-  <p id="messageBoard"></p>
+  <div id="messageboard">
+    <p id="nameFeild" size="4"></p>
+    <p id="messageFeild" size="6"></p>
+  </div>
   <body>
     <input type="text" name="message" id="newMessage" value="">
     <button name="Send Message" onclick="sendButtonClick(document.getElementById('newMessage').value, document.getElementById('banner').value)">Send Message</button>
