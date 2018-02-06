@@ -1,0 +1,28 @@
+{
+  "name": "nodewebmessenger",
+  "version": "1.0.0",
+  "description": "A simple web messenger built with node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgisolfi/NodeWebMessenger.git"
+  },
+  "keywords": [
+    "Node.js",
+    "socket.io",
+    "Messenger"
+  ],
+  "author": "Daniel Gisolfi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgisolfi/NodeWebMessenger/issues"
+  },
+  "homepage": "https://github.com/dgisolfi/NodeWebMessenger#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
+}

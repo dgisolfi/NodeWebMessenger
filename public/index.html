@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>﻿
+
+    <style>
+      body {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <h1>Message Board</h1>
+  
+  <p id="messageBoard"></p>
+  <body>
+    <input type="text" name="message" value="">
+    <button name="Send Message">Send Message</button>
+  </body>
+</html>
