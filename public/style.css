@@ -1,0 +1,66 @@
+/*style.css
+Create a style sheet for the node messenger web app
+Author: Daniel Gisolfi
+Version 1.0*/
+
+/*Main Page*/
+html{
+	font-family: "Oxygen","Oxygen","Segoe UI","Helvetica Neue",sans-serif;
+	font-weight: 400;
+	color: #3e3e40;
+}
+
+body{
+	margin:20; 
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+input[type=button]{
+	background-color: black;
+	border: none;
+   	color: white;
+   	padding: 16px 32px;
+   	text-decoration: none;
+   	margin: 4px 2px;
+   	cursor: pointer;
+}
+
+input[type=text]{
+	width: 15%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+#banner {
+	text-align: center;
+}
+
+#namefeild {
+	text-align: center;
+
+}
+
+#messageBoard { 
+	text-align: center;
+}
+
+/*Border*/
+#top, #bottom, #left, #right {
+    background: black;
+    position: fixed;
+    }
+    #left, #right {
+        top: 0; bottom: 0;
+        width: 5%;
+        }
+        #left { left: 0; }
+        #right { right: 0; }
+        
+    #top, #bottom {
+        left: 0; right: 0;
+        height: 5%;
+        }
+        #top { top: 0; }
+        #bottom { bottom: 0; }

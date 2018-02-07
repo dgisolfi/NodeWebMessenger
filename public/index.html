@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
     <title>Messenger</title>
     <script type="text/javascript" src="client.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
     </script>﻿
-    <style>
-      body {
-        padding: 20px;
-      }
-    </style>
   </head>
+  <div id="left"></div>
+  <div id="right"></div>
+  <div id="top"></div>
+  <div id="bottom"></div>
   <h1 id="banner">Message Board</h1>
   <div id="messageboard">
     <p id="nameFeild" size="4"></p>
@@ -21,7 +21,7 @@
   </div>
   <body>
     <input type="text" name="message" id="newMessage" value="">
-    <button name="Send Message" onclick="sendButtonClick(document.getElementById('newMessage').value, document.getElementById('banner').value)">Send Message</button>
+    <input type="button" name="Send Message" onclick="sendButtonClick(document.getElementById('newMessage').value, document.getElementById('banner').value)">Send Message</input>
   </body>
 
   <script>
