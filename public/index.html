@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css"> 
-    <title>Messenger</title>
-    <script type="text/javascript" src="client.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-    </script>﻿
-  </head>
-  <div id="left"></div>
-  <div id="right"></div>
-  <div id="top"></div>
-  <div id="bottom"></div>
-  <h1 id="banner">Message Board</h1>
-  <div id="messageboard">
-    <p id="nameFeild" size="4"></p>
-    <p id="messageFeild" size="6"></p>
-  </div>
-  <body>
-    <input type="text" name="message" id="newMessage" value="">
-    <input type="button" name="Send Message" onclick="sendButtonClick(document.getElementById('newMessage').value, document.getElementById('banner').value)">Send Message</input>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <title>Messenger</title>
+        <script type="text/javascript" src="client.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+          var socket = io();
+        </script>﻿
+    </head>
+    <body>
+        <!-- container -->
+        <div id="container">
+            <!--  header -->
+            <div id="header">
+                <div id="header-content">
+                <!-- logo/home link -->
+                    <div id="logo"><span title="Node Messenger"><a href="index.html"><img src="logo.png"></a></span></div>
+                    <!-- navbar -->
+                    <div class="navbar">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- content area -->
+            <div id="content_area">
+                <!-- homepage welcome message/title -->
+                <div id="banner">
+                    <h1 id="banner-title">Message Board</h1>
+                </div>
+                <div id="messageBoard">
+                    <p id="nameFeild" size="4"></p>
+                    <p id="messageFeild" size="6"></p>
+                    <input type="text" name="message" id="newMessage" value="">
+                    <input id="button" type="button" name="Send Message" onclick="sendButtonClick(document.getElementById('newMessage').value, document.getElementById('banner-title').getText)">Send Message</input>
+                </div>
+            </div>
+        </div>
   </body>
-
   <script>
       var userName = prompt("Enter Your Username: ");
       newClient(userName);
   </script>
-
+    <!-- footer -->
+    <div id="footer">
+        <div id="footer-content">
+            <p><a href= http://www.marist.edu>Marist College</a> | (845) 575-3000</p>
+            <p>3399 North Road, Poughkeepsie, NY, 12601</p>
+        </div>
+    </div>
 </html>
