@@ -24,6 +24,16 @@ body{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border: none;
+	box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: black}
+
+.button:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 input[type=text]{
@@ -31,25 +41,28 @@ input[type=text]{
 	padding: 12px 20px;
 	margin: 8px 0;
 	box-sizing: border-box;
+	height: 50px
+	font-size: 35px;
 }
 
 /* Navigation Bar */
 .navbar{
-	padding-left:10%;
+	/*padding-left:10%;*/
 	padding-top:0;
+	height: 60px;
 }
 
 .navbar ul {
 	list-style-type: none;
 	margin: 0;
-	padding: 10px;
-	height: 40px;
+	padding-top:10px;
+	height: 60px;
 	overflow: hidden;
 	background-color: #4f6c9b;
 }
 .navbar ul li {
 	float: left;
-	padding-left:2%;
+	padding-left:1%;
 }
 .navbar ul li a {
 	display: block;
@@ -62,9 +75,24 @@ input[type=text]{
 }
 .navbar ul li a:hover {
 	background-color: #111;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.2);
 }
 
+.navbarText{
+	list-style-type: none;
+	margin: 0;
+	padding-top:10px;
+	height: 60px;
+	overflow: hidden;
+	background-color: #4f6c9b;
+
+
+}
+
+#userName{
+
+}
+/*
 .dropdown-content {
     display: none;
     position: absolute;
@@ -80,14 +108,14 @@ input[type=text]{
     display: block;
     text-align: left;
 }
-
-.dropdown-content a:hover {background-color: gray}
-
-.dropdown:hover .dropdown-content {
+*/
+/*.dropdown-content a:hover {background-color: gray}
+*/
+/*.dropdown:hover .dropdown-content {
     display: block;
-}
+}*/
 
-#header { 
+/*#header { 
 	width:100%; 
 	height:9%; 
 	border-bottom:1px solid #c7c7c7; 
@@ -95,15 +123,19 @@ input[type=text]{
 	position:absolute;
 	top:0;
 	left:0;
- }
+ }*/
 
-#header-content{
+/*#header-content{
 	padding-left:15%;
-}
+}*/
 
+#logo{
+	padding-top: 10px;
+	width: 60px;
+}
 #logo img { 
 	float:left; 
-	width:50px; 
+	width:60px; 
 	color: black;
 }
 
@@ -112,6 +144,7 @@ input[type=text]{
 	padding-top:100px;
 	width:95%; 
 	margin:0 auto;
+	text-align: center;
 }
 
 /* Homepage top welcome message */
@@ -121,7 +154,7 @@ input[type=text]{
 	clear: both;
 	color: black;
 	margin-top: 10px
-	text-align: center;
+
 }
 
 #banner h1 {
@@ -146,6 +179,7 @@ input[type=text]{
 	border-style:solid;
 	border-width:1px;
 	margin-top:20%;
+	padding-left: 5px;
 
 }
 
