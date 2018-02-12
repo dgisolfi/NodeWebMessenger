@@ -2,7 +2,7 @@
 var socket;
 
 function newClient(userName){
-	document.getElementById("userName").value = "UserName: " + userName;
+	// document.getElementById("").value = "UserName: " + userName;
 }
 
 function setup() {
@@ -22,15 +22,15 @@ function setup() {
 
 function sendButtonClick(message, bannerTxt){
 	console.log('Sending: ' + message);
-	
+
 	function getUsername(bannerTxt){
 		bannerTxt = bannerTxt.toString();
 		var userName  = bannerTxt.split(" ");
 	}
 	console.log(userName);
-	
+
 	var data = {
-		msg: message, 
+		msg: message,
 		name: userName
 	}
 	//Emit message to all other sockets
@@ -42,5 +42,3 @@ function printMessage(message, userName){
 	document.getElementById("nameFeild").innerHTML = userName;
 	document.getElementById("messageFeild").innerHTML = message;
 }
-
-

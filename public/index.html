@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <script type="text/javascript" src="client.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
+    <!-- Commented out as it causes a white bar on top of page  -->
+    <!-- <script>
       var socket = io();
-    </script>﻿
+    </script>﻿ -->
   </head>
   <body>
     <header>
@@ -51,15 +52,17 @@
       <div class="container">
         <article id="usage">
           <h1>Usage</h2>
-          <p>To use the node web messenger follow the following steps:</p>
-          <p>1. Launch the website and esnure other users are on the site by viewing the pannel to the right</p>
-          <p>2. Enter a message into the box above and press the send button to output a message to all users on the message board</p>
-          <p>3. Enjoy lightweight messaging between peers</p>
+            <ol>
+              <li>To use the node web messenger follow the following steps:</li>
+              <li>Launch the website and esnure other users are on the site by viewing the pannel to the right</li>
+              <li>Enter a message into the box above and press the send button to output a message to all users on the message board</li>
+              <li>Enjoy lightweight messaging between peers</li>
+            </ol>
         </article>
 
         <aside id="users">
           <div class="dark">
-          <h1>Users</h2>
+          <h1>Users</h1>
           <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like</p>
         </aside>
       </div>

@@ -54,6 +54,7 @@ ul{
 
 /* Header */
 header{
+  margin: 0;
   background: #4f6c9b;
   color: #ffffff;
   padding-top: 30px;
@@ -134,14 +135,8 @@ header a:hover{
 
 #messagefield input[type="message"]{
   padding: 4px;
-  height: 25px;
+  height: 33px;
   width: 250px;
-}
-
-
-/* main-col */
-article#main-col{
-  
 }
 
 /* Usage */
@@ -159,9 +154,9 @@ article#usage h1{
   padding-bottom: 5px;
 }
 
-article#usage p{
+article#usage ol{
   text-align: left;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 /* users */
@@ -174,6 +169,80 @@ aside#users{
 aside#users h1{
   font-size: 20px;
 }
+
+/* About page */
+/* main-col */
+article#main-col{
+  margin-top: 20px;
+  float: left;
+  width: 65%;
+}
+
+article#main-col h1{
+  text-align: left;
+  color: black;
+  font-size: 35px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+article#main-col h2{
+  text-align: left;
+  color: black;
+  font-size: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+article#main-col p{
+  text-align: left;
+  color: black;
+  font-size: 18px;
+  padding-top:0px;
+  padding-bottom: 0px;
+}
+
+article#main-col ul{
+  font-size: 18px;
+  list-style-type: none;
+}
+
+article#main-col li{
+  /* float:left; */
+  /* display: inline; */
+  /* top,right,bottom,left */
+  padding: 0 20px 0 20px;
+}
+
+aside#github {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+aside#github h1{
+  padding-top:0px;
+  font-size: 25px;
+}
+
+aside#github a{
+  color: #ffffff;
+  font-size: 16px;
+}
+aside#github img{
+  height: 130px;
+  width: 130px;
+  float: left;
+  padding-right: 10px
+
+}
+
+aside#github p{
+  padding-top: 0px;
+  font-size: 16px;
+}
+
 
 /* Footer */
 
