@@ -20,20 +20,39 @@ function setup() {
 // users
 
 // add new users
-function newClient(userName){
+function newClient(newUserName){
 	//Declare the unordered lsit and the list elements
   var ul = document.getElementById("user-list");
   var li = document.createElement("current-user");
 
-  li.appendChild(document.createTextNode("UserName: " + userName));
+  li.appendChild(document.createTextNode("UserName: " + newUserName));
 	// create the new element for the list with  id of user + rand 0-99
 	li.setAttribute("id", Math.floor(Math.random() * 20));
 	//append the new list element
 	ul.appendChild(li);
 
-	//Output the new user and their id
-	console.log("New user id = " + li.id);
+	// //Output the new user and their id
+	// console.log("New user id = " + li.id);
 }
+
+//display known current user
+function knownClient(userName){
+	//Declare the unordered lsit and the list elements
+	var ul = document.getElementById("user-list");
+	var li = document.createElement("current-user");
+
+	li.appendChild(document.createTextNode("UserName: " + userName));
+	// create the new element for the list with  id of user + rand 0-99
+	li.setAttribute("id", Math.floor(Math.random() * 20));
+	//append the new list element
+	ul.appendChild(li);
+
+	// //Output the new user and their id
+	// console.log("New user id = " + li.id);
+
+}
+
+// display all other users
 
 
 // Message sending
@@ -56,6 +75,8 @@ function sendButtonClick(message, bannerTxt){
 }
 
 function printMessage(message, userName){
-	document.getElementById("nameFeild").innerHTML = userName;
-	document.getElementById("messageFeild").innerHTML = message;
+	var nameFeild = document.getElementById("nameFeild").innerHTML;
+	var messageFeild = document.getElementById("messageFeild").innerHTML
+
+	nameFeild.appendChild(userName)
 }

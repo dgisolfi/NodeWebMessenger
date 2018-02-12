@@ -71,8 +71,18 @@
     </section>
 
     <script>
-        var userName = prompt("Enter Your Username: ");
-        newClient(userName);
+    //Grab the local variable for username
+    var userName = localStorage.getItem("userName");
+    //if one was not set its val is null, if so prompt user for input
+    if (userName == null){
+      var newUserName = prompt("Enter Your Username: ");
+      localStorage.setItem("userName", newUserName);
+      newClient(newUserName);
+      //else print out the user in the user list again
+    }else {
+      //call know client passing in the value found locally
+      knownClient(userName);
+    }
     </script>
 
     <footer>
