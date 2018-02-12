@@ -2,7 +2,7 @@
 var socket;
 
 function newClient(userName){
-	document.getElementById("banner").innerHTML = "Message Board - User: " + userName;
+	document.getElementById("userName").value = "UserName: " + userName;
 }
 
 function setup() {
@@ -27,6 +27,7 @@ function sendButtonClick(message, bannerTxt){
 		bannerTxt = bannerTxt.toString();
 		var userName  = bannerTxt.split(" ");
 	}
+	console.log(userName);
 	
 	var data = {
 		msg: message, 

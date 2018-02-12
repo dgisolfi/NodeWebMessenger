@@ -1,56 +1,77 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css"> 
-        <title>Node Web Messenger</title>
-        <script type="text/javascript" src="client.js"></script>
-        <script src="/socket.io/socket.io.js"></script>
-        <script>
-          var socket = io();
-        </script>﻿
-    </head>
-    <body>
-        <!-- container -->
-        <div id="container">
-            <!--  header -->
-            <div id="header">
-                <div id="header-content">
-                <!-- logo/home link -->
-                    <div id="logo"><span title="Node Messenger"><a href="index.html"><img src="logo.png"></a></span></div>
-                    <!-- navbar -->
-                    <div class="navbar">
-                        <ul>
-                            <li><p href=" " class = "navbarText">Node Web Messenger</p></li>
-                            <li><p href=" " class = "navbarText" id="userName">UserName: </p></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- content area -->
-            <div id="content_area">
-                <!-- homepage welcome message/title -->
-                <div id="banner">
-                    <h1 id="banner-title">Message Board</h1>
-                </div>
-                <div id="messageBoard">
-                    <p id="nameFeild" size="4"></p>
-                    <p id="messageFeild" size="6"></p>
-                    <input type="text" name="message" id="newMessage" value="">
-                    <button class="button" name="Send Message" onclick="sendButtonClick(document.getElementById('newMessage').value, document.getElementById('banner-title').getText)">Send Message</button>
-                </div>
-            </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="A basic web messenger using nodejs">
+    <meta name="keywords" content="messenger, web design, nodejs">
+    <meta name="author" content="Daniel Gisolfi">
+    <title>Node Web Messenger | Messenger</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="client.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>﻿
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Node</span> Web Messenger</h1>
         </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Messenger</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--Message Board-->
+    <section id="messageboard">
+      <div class="container">
+        <h1>Message Board</h1>
+        <p>Daniel: Hey Everyone!</p>
+      </div>
+    </section>
+
+    <section id="messagefield">
+      <div class="container">
+        <h1>Enter A Message Here</h1>
+        <form>
+          <input type="message" placeholder="Type a Message">
+          <button type="submit" class="msgButton" onclick="sendButtonClick(document.getElementById('newMessage').value, document.getElementById('userName').getText)">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <article id="usage">
+          <h1>Usage</h2>
+          <p>To use the node web messenger follow the following steps:</p>
+          <p>1. Launch the website and esnure other users are on the site by viewing the pannel to the right</p>
+          <p>2. Enter a message into the box above and press the send button to output a message to all users on the message board</p>
+          <p>3. Enjoy lightweight messaging between peers</p>
+        </article>
+
+        <aside id="users">
+          <div class="dark">
+          <h1>Users</h2>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like</p>
+        </aside>
+      </div>
+    </section>
+
+    <script>
+        var userName = prompt("Enter Your Username: ");
+        newClient(userName);
+    </script>
+
+    <footer>
+       <p><p> Daniel Gisolfi | Node Web Messenge | <a href="https://github.com/dgisolfi/NodeWebMessenger"> Github Repository</a></p>
+    </footer>
   </body>
-  <script>
-      var userName = prompt("Enter Your Username: ");
-      newClient(userName);
-  </script>
-    <!-- footer -->
-    <div id="footer">
-        <div id="footer-content">
-            <p> Daniel Gisolfi | Node Web Messenger</p>
-            <p><a href="https://github.com/dgisolfi/NodeWebMessenger"> Github Repository</a></p>
-        </div>
-    </div>
 </html>
