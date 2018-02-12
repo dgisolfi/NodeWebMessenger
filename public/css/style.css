@@ -170,6 +170,15 @@ aside#users h1{
   font-size: 20px;
 }
 
+aside#user-list ul{
+  padding-left: 10px;
+}
+
+aside#user-list li{
+  padding-left: 10px;
+}
+
+
 /* About page */
 /* main-col */
 article#main-col{

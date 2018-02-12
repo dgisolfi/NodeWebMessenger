@@ -1,9 +1,6 @@
 // Keep track of our socket connection
 var socket;
-
-function newClient(userName){
-	document.getElementById("current-user").value = "UserName: " + userName;
-}
+var math;
 
 function setup() {
 	socket = io.connect('http://localhost:3000');
@@ -20,6 +17,26 @@ function setup() {
 	}
 }
 
+// users
+
+// add new users
+function newClient(userName){
+	//Declare the unordered lsit and the list elements
+  var ul = document.getElementById("user-list");
+  var li = document.createElement("current-user");
+
+  li.appendChild(document.createTextNode("UserName: " + userName));
+	// create the new element for the list with  id of user + rand 0-99
+	li.setAttribute("id", Math.floor(Math.random() * 20));
+	//append the new list element
+	ul.appendChild(li);
+
+	//Output the new user and their id
+	console.log("New user id = " + li.id);
+}
+
+
+// Message sending
 function sendButtonClick(message, bannerTxt){
 	console.log('Sending: ' + message);
 
