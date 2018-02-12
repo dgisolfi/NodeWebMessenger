@@ -2,7 +2,7 @@
 var socket;
 
 function newClient(userName){
-	// document.getElementById("").value = "UserName: " + userName;
+	document.getElementById("current-user").value = "UserName: " + userName;
 }
 
 function setup() {
